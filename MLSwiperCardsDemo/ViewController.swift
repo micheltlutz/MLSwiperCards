@@ -46,7 +46,9 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cardsViewModel.list.count
+        let itens = cardsViewModel.list.count
+        swiperCards.numberOfPages = itens
+        return itens
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

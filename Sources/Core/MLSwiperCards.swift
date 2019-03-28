@@ -8,23 +8,47 @@
 
 import UIKit
 
-public class MLSwiperCards: UICollectionView {
-    static let name = "MLSwiperCards"
+public class MLSwiperCards: UIView {
+    public static let name = "MLSwiperCards"
+
+    private var collection: MLSwiperCardsCollection!
+    public var numberOfPages: Int = 0 {
+        didSet {
+            pageControl.numberOfPages = numberOfPages
+        }
+    }
+
+    private let pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.currentPage = 0
+        pageControl.pageIndicatorTintColor = .red
+        return pageControl
+    }()
+
     public init(cellSize: CGSize) {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.itemSize = cellSize
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.minimumLineSpacing = 8.0
-        layout.minimumInteritemSpacing = 8.0
-        super.init(frame: .zero, collectionViewLayout: layout)
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .green
-        isPagingEnabled = true
-        showsHorizontalScrollIndicator = false
+        super.init(frame: .zero)
+        collection = MLSwiperCardsCollection(cellSize: cellSize)
+        setupViewConfiguration()
     }
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+extension MLSwiperCards: MLViewConfiguration {
+    func setupConstraints() {
+        collection.pinEdgesToSuperview()
+        NSLayoutConstraint.activate([
+            pageControl.centerXAnchor.constraint(equalTo: centerXAnchor),
+            pageControl.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
+        ])
+    }
+
+    func buildViewHierarchy() {
+        addSubview(collection)
+        addSubview(pageControl)
+    }
+
+
 }
