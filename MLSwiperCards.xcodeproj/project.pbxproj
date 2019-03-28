@@ -1,0 +1,930 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0D79665224D088A0038F4CA /* MLSwiperCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D7965B224D088A0038F4CA /* MLSwiperCards.framework */; };
+		D0D7966A224D088A0038F4CA /* MLSwiperCardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D79669224D088A0038F4CA /* MLSwiperCardsTests.swift */; };
+		D0D7966C224D088A0038F4CA /* MLSwiperCards.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D7965E224D088A0038F4CA /* MLSwiperCards.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0D7967C224D0A4E0038F4CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D7967B224D0A4E0038F4CA /* AppDelegate.swift */; };
+		D0D7967E224D0A4E0038F4CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D7967D224D0A4E0038F4CA /* ViewController.swift */; };
+		D0D79681224D0A4E0038F4CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D7967F224D0A4E0038F4CA /* Main.storyboard */; };
+		D0D79683224D0A510038F4CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D79682224D0A510038F4CA /* Assets.xcassets */; };
+		D0D79686224D0A510038F4CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D79684224D0A510038F4CA /* LaunchScreen.storyboard */; };
+		D0D79691224D0A520038F4CA /* MLSwiperCardsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D79690224D0A520038F4CA /* MLSwiperCardsDemoTests.swift */; };
+		D0D7969C224D0A520038F4CA /* MLSwiperCardsDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D7969B224D0A520038F4CA /* MLSwiperCardsDemoUITests.swift */; };
+		D0D796AA224D0CB00038F4CA /* MLSwiperCards.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D0D796A9224D0CB00038F4CA /* MLSwiperCards.podspec */; };
+		D0D796AC224D10CA0038F4CA /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = D0D796AB224D10CA0038F4CA /* LICENCE */; };
+		D0D796AE224D11800038F4CA /* MLSwiperCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D796AD224D11800038F4CA /* MLSwiperCards.swift */; };
+		D0D796B2224D2CCE0038F4CA /* MLSwiperCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D796B1224D2CCE0038F4CA /* MLSwiperCardCell.swift */; };
+		D0D796B4224D2E9F0038F4CA /* MLViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D796B3224D2E9F0038F4CA /* MLViewConfiguration.swift */; };
+		D0D796B6224D30290038F4CA /* AutoLayout+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D796B5224D30290038F4CA /* AutoLayout+Extensions.swift */; };
+		D0D796B7224D30710038F4CA /* MLSwiperCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D7965B224D088A0038F4CA /* MLSwiperCards.framework */; };
+		D0D796B8224D30710038F4CA /* MLSwiperCards.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0D7965B224D088A0038F4CA /* MLSwiperCards.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D0D796BD224D35670038F4CA /* MLSwiperCardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D796BC224D35670038F4CA /* MLSwiperCardsModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0D79666224D088A0038F4CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0D79652224D088A0038F4CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0D7965A224D088A0038F4CA;
+			remoteInfo = MLSwiperCards;
+		};
+		D0D7968D224D0A510038F4CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0D79652224D088A0038F4CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0D79678224D0A4D0038F4CA;
+			remoteInfo = MLSwiperCardsDemo;
+		};
+		D0D79698224D0A520038F4CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0D79652224D088A0038F4CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0D79678224D0A4D0038F4CA;
+			remoteInfo = MLSwiperCardsDemo;
+		};
+		D0D796B9224D30710038F4CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0D79652224D088A0038F4CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0D7965A224D088A0038F4CA;
+			remoteInfo = MLSwiperCards;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D0D796BB224D30710038F4CA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D0D796B8224D30710038F4CA /* MLSwiperCards.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D0D7965B224D088A0038F4CA /* MLSwiperCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLSwiperCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D7965E224D088A0038F4CA /* MLSwiperCards.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLSwiperCards.h; sourceTree = "<group>"; };
+		D0D7965F224D088A0038F4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D79664224D088A0038F4CA /* MLSwiperCardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLSwiperCardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D79669224D088A0038F4CA /* MLSwiperCardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSwiperCardsTests.swift; sourceTree = "<group>"; };
+		D0D7966B224D088A0038F4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D79679224D0A4D0038F4CA /* MLSwiperCardsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLSwiperCardsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D7967B224D0A4E0038F4CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D0D7967D224D0A4E0038F4CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0D79680224D0A4E0038F4CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0D79682224D0A510038F4CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0D79685224D0A510038F4CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0D79687224D0A510038F4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D7968C224D0A510038F4CA /* MLSwiperCardsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLSwiperCardsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D79690224D0A520038F4CA /* MLSwiperCardsDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSwiperCardsDemoTests.swift; sourceTree = "<group>"; };
+		D0D79692224D0A520038F4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D79697224D0A520038F4CA /* MLSwiperCardsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLSwiperCardsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D7969B224D0A520038F4CA /* MLSwiperCardsDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSwiperCardsDemoUITests.swift; sourceTree = "<group>"; };
+		D0D7969D224D0A520038F4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D796A7224D0BE40038F4CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D0D796A8224D0BF30038F4CA /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		D0D796A9224D0CB00038F4CA /* MLSwiperCards.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MLSwiperCards.podspec; sourceTree = "<group>"; };
+		D0D796AB224D10CA0038F4CA /* LICENCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
+		D0D796AD224D11800038F4CA /* MLSwiperCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSwiperCards.swift; sourceTree = "<group>"; };
+		D0D796B1224D2CCE0038F4CA /* MLSwiperCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSwiperCardCell.swift; sourceTree = "<group>"; };
+		D0D796B3224D2E9F0038F4CA /* MLViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLViewConfiguration.swift; sourceTree = "<group>"; };
+		D0D796B5224D30290038F4CA /* AutoLayout+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AutoLayout+Extensions.swift"; sourceTree = "<group>"; };
+		D0D796BC224D35670038F4CA /* MLSwiperCardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSwiperCardsModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0D79658224D088A0038F4CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D79661224D088A0038F4CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D79665224D088A0038F4CA /* MLSwiperCards.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D79676224D0A4D0038F4CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D796B7224D30710038F4CA /* MLSwiperCards.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D79689224D0A510038F4CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D79694224D0A520038F4CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0D79651224D088A0038F4CA = {
+			isa = PBXGroup;
+			children = (
+				D0D796AB224D10CA0038F4CA /* LICENCE */,
+				D0D796A8224D0BF30038F4CA /* CHANGELOG.md */,
+				D0D7965D224D088A0038F4CA /* MLSwiperCards */,
+				D0D796A9224D0CB00038F4CA /* MLSwiperCards.podspec */,
+				D0D7967A224D0A4E0038F4CA /* MLSwiperCardsDemo */,
+				D0D7968F224D0A520038F4CA /* MLSwiperCardsDemoTests */,
+				D0D7969A224D0A520038F4CA /* MLSwiperCardsDemoUITests */,
+				D0D79668224D088A0038F4CA /* MLSwiperCardsTests */,
+				D0D7965C224D088A0038F4CA /* Products */,
+				D0D796A7224D0BE40038F4CA /* README.md */,
+			);
+			sourceTree = "<group>";
+		};
+		D0D7965C224D088A0038F4CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0D7965B224D088A0038F4CA /* MLSwiperCards.framework */,
+				D0D79664224D088A0038F4CA /* MLSwiperCardsTests.xctest */,
+				D0D79679224D0A4D0038F4CA /* MLSwiperCardsDemo.app */,
+				D0D7968C224D0A510038F4CA /* MLSwiperCardsDemoTests.xctest */,
+				D0D79697224D0A520038F4CA /* MLSwiperCardsDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0D7965D224D088A0038F4CA /* MLSwiperCards */ = {
+			isa = PBXGroup;
+			children = (
+				D0D796AF224D26960038F4CA /* Supporting Files */,
+				D0D796B0224D27390038F4CA /* Core */,
+			);
+			path = MLSwiperCards;
+			sourceTree = "<group>";
+		};
+		D0D79668224D088A0038F4CA /* MLSwiperCardsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0D79669224D088A0038F4CA /* MLSwiperCardsTests.swift */,
+				D0D7966B224D088A0038F4CA /* Info.plist */,
+			);
+			path = MLSwiperCardsTests;
+			sourceTree = "<group>";
+		};
+		D0D7967A224D0A4E0038F4CA /* MLSwiperCardsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D0D7967B224D0A4E0038F4CA /* AppDelegate.swift */,
+				D0D7967D224D0A4E0038F4CA /* ViewController.swift */,
+				D0D7967F224D0A4E0038F4CA /* Main.storyboard */,
+				D0D79682224D0A510038F4CA /* Assets.xcassets */,
+				D0D79684224D0A510038F4CA /* LaunchScreen.storyboard */,
+				D0D79687224D0A510038F4CA /* Info.plist */,
+			);
+			path = MLSwiperCardsDemo;
+			sourceTree = "<group>";
+		};
+		D0D7968F224D0A520038F4CA /* MLSwiperCardsDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0D79690224D0A520038F4CA /* MLSwiperCardsDemoTests.swift */,
+				D0D79692224D0A520038F4CA /* Info.plist */,
+			);
+			path = MLSwiperCardsDemoTests;
+			sourceTree = "<group>";
+		};
+		D0D7969A224D0A520038F4CA /* MLSwiperCardsDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D0D7969B224D0A520038F4CA /* MLSwiperCardsDemoUITests.swift */,
+				D0D7969D224D0A520038F4CA /* Info.plist */,
+			);
+			path = MLSwiperCardsDemoUITests;
+			sourceTree = "<group>";
+		};
+		D0D796AF224D26960038F4CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0D7965E224D088A0038F4CA /* MLSwiperCards.h */,
+				D0D7965F224D088A0038F4CA /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0D796B0224D27390038F4CA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D0D796B5224D30290038F4CA /* AutoLayout+Extensions.swift */,
+				D0D796AD224D11800038F4CA /* MLSwiperCards.swift */,
+				D0D796B1224D2CCE0038F4CA /* MLSwiperCardCell.swift */,
+				D0D796B3224D2E9F0038F4CA /* MLViewConfiguration.swift */,
+				D0D796BC224D35670038F4CA /* MLSwiperCardsModel.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D0D79656224D088A0038F4CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D7966C224D088A0038F4CA /* MLSwiperCards.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D0D7965A224D088A0038F4CA /* MLSwiperCards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D7966F224D088A0038F4CA /* Build configuration list for PBXNativeTarget "MLSwiperCards" */;
+			buildPhases = (
+				D0D79656224D088A0038F4CA /* Headers */,
+				D0D79657224D088A0038F4CA /* Sources */,
+				D0D79658224D088A0038F4CA /* Frameworks */,
+				D0D79659224D088A0038F4CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MLSwiperCards;
+			productName = MLSwiperCards;
+			productReference = D0D7965B224D088A0038F4CA /* MLSwiperCards.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D0D79663224D088A0038F4CA /* MLSwiperCardsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D79672224D088A0038F4CA /* Build configuration list for PBXNativeTarget "MLSwiperCardsTests" */;
+			buildPhases = (
+				D0D79660224D088A0038F4CA /* Sources */,
+				D0D79661224D088A0038F4CA /* Frameworks */,
+				D0D79662224D088A0038F4CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0D79667224D088A0038F4CA /* PBXTargetDependency */,
+			);
+			name = MLSwiperCardsTests;
+			productName = MLSwiperCardsTests;
+			productReference = D0D79664224D088A0038F4CA /* MLSwiperCardsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D0D79678224D0A4D0038F4CA /* MLSwiperCardsDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D796A4224D0A520038F4CA /* Build configuration list for PBXNativeTarget "MLSwiperCardsDemo" */;
+			buildPhases = (
+				D0D79675224D0A4D0038F4CA /* Sources */,
+				D0D79676224D0A4D0038F4CA /* Frameworks */,
+				D0D79677224D0A4D0038F4CA /* Resources */,
+				D0D796BB224D30710038F4CA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0D796BA224D30710038F4CA /* PBXTargetDependency */,
+			);
+			name = MLSwiperCardsDemo;
+			productName = MLSwiperCardsDemo;
+			productReference = D0D79679224D0A4D0038F4CA /* MLSwiperCardsDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0D7968B224D0A510038F4CA /* MLSwiperCardsDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D796A5224D0A520038F4CA /* Build configuration list for PBXNativeTarget "MLSwiperCardsDemoTests" */;
+			buildPhases = (
+				D0D79688224D0A510038F4CA /* Sources */,
+				D0D79689224D0A510038F4CA /* Frameworks */,
+				D0D7968A224D0A510038F4CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0D7968E224D0A510038F4CA /* PBXTargetDependency */,
+			);
+			name = MLSwiperCardsDemoTests;
+			productName = MLSwiperCardsDemoTests;
+			productReference = D0D7968C224D0A510038F4CA /* MLSwiperCardsDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D0D79696224D0A520038F4CA /* MLSwiperCardsDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D796A6224D0A520038F4CA /* Build configuration list for PBXNativeTarget "MLSwiperCardsDemoUITests" */;
+			buildPhases = (
+				D0D79693224D0A520038F4CA /* Sources */,
+				D0D79694224D0A520038F4CA /* Frameworks */,
+				D0D79695224D0A520038F4CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0D79699224D0A520038F4CA /* PBXTargetDependency */,
+			);
+			name = MLSwiperCardsDemoUITests;
+			productName = MLSwiperCardsDemoUITests;
+			productReference = D0D79697224D0A520038F4CA /* MLSwiperCardsDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0D79652224D088A0038F4CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Cingulo;
+				TargetAttributes = {
+					D0D7965A224D088A0038F4CA = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					D0D79663224D088A0038F4CA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D0D79678224D0A4D0038F4CA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D0D7968B224D0A510038F4CA = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D0D79678224D0A4D0038F4CA;
+					};
+					D0D79696224D0A520038F4CA = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D0D79678224D0A4D0038F4CA;
+					};
+				};
+			};
+			buildConfigurationList = D0D79655224D088A0038F4CA /* Build configuration list for PBXProject "MLSwiperCards" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0D79651224D088A0038F4CA;
+			productRefGroup = D0D7965C224D088A0038F4CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0D7965A224D088A0038F4CA /* MLSwiperCards */,
+				D0D79663224D088A0038F4CA /* MLSwiperCardsTests */,
+				D0D79678224D0A4D0038F4CA /* MLSwiperCardsDemo */,
+				D0D7968B224D0A510038F4CA /* MLSwiperCardsDemoTests */,
+				D0D79696224D0A520038F4CA /* MLSwiperCardsDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0D79659224D088A0038F4CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D796AC224D10CA0038F4CA /* LICENCE in Resources */,
+				D0D796AA224D0CB00038F4CA /* MLSwiperCards.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D79662224D088A0038F4CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D79677224D0A4D0038F4CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D79686224D0A510038F4CA /* LaunchScreen.storyboard in Resources */,
+				D0D79683224D0A510038F4CA /* Assets.xcassets in Resources */,
+				D0D79681224D0A4E0038F4CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D7968A224D0A510038F4CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D79695224D0A520038F4CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0D79657224D088A0038F4CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D796B6224D30290038F4CA /* AutoLayout+Extensions.swift in Sources */,
+				D0D796B2224D2CCE0038F4CA /* MLSwiperCardCell.swift in Sources */,
+				D0D796BD224D35670038F4CA /* MLSwiperCardsModel.swift in Sources */,
+				D0D796B4224D2E9F0038F4CA /* MLViewConfiguration.swift in Sources */,
+				D0D796AE224D11800038F4CA /* MLSwiperCards.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D79660224D088A0038F4CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D7966A224D088A0038F4CA /* MLSwiperCardsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D79675224D0A4D0038F4CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D7967E224D0A4E0038F4CA /* ViewController.swift in Sources */,
+				D0D7967C224D0A4E0038F4CA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D79688224D0A510038F4CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D79691224D0A520038F4CA /* MLSwiperCardsDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D79693224D0A520038F4CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D7969C224D0A520038F4CA /* MLSwiperCardsDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0D79667224D088A0038F4CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0D7965A224D088A0038F4CA /* MLSwiperCards */;
+			targetProxy = D0D79666224D088A0038F4CA /* PBXContainerItemProxy */;
+		};
+		D0D7968E224D0A510038F4CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0D79678224D0A4D0038F4CA /* MLSwiperCardsDemo */;
+			targetProxy = D0D7968D224D0A510038F4CA /* PBXContainerItemProxy */;
+		};
+		D0D79699224D0A520038F4CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0D79678224D0A4D0038F4CA /* MLSwiperCardsDemo */;
+			targetProxy = D0D79698224D0A520038F4CA /* PBXContainerItemProxy */;
+		};
+		D0D796BA224D30710038F4CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0D7965A224D088A0038F4CA /* MLSwiperCards */;
+			targetProxy = D0D796B9224D30710038F4CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0D7967F224D0A4E0038F4CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0D79680224D0A4E0038F4CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0D79684224D0A510038F4CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0D79685224D0A510038F4CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0D7966D224D088A0038F4CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D0D7966E224D088A0038F4CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D0D79670224D088A0038F4CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2L8WPWWVB6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/MLSwiperCards/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.micheltlutz.MLSwiperCards;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0D79671224D088A0038F4CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2L8WPWWVB6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/MLSwiperCards/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.micheltlutz.MLSwiperCards;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D0D79673224D088A0038F4CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2L8WPWWVB6;
+				INFOPLIST_FILE = MLSwiperCardsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.micheltlutz.MLSwiperCardsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0D79674224D088A0038F4CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2L8WPWWVB6;
+				INFOPLIST_FILE = MLSwiperCardsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.micheltlutz.MLSwiperCardsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D0D7969E224D0A520038F4CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2L8WPWWVB6;
+				INFOPLIST_FILE = MLSwiperCardsDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.micheltlutz.MLSwiperCardsDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0D7969F224D0A520038F4CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2L8WPWWVB6;
+				INFOPLIST_FILE = MLSwiperCardsDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.micheltlutz.MLSwiperCardsDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D0D796A0224D0A520038F4CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2L8WPWWVB6;
+				INFOPLIST_FILE = MLSwiperCardsDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.micheltlutz.MLSwiperCardsDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MLSwiperCardsDemo.app/MLSwiperCardsDemo";
+			};
+			name = Debug;
+		};
+		D0D796A1224D0A520038F4CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2L8WPWWVB6;
+				INFOPLIST_FILE = MLSwiperCardsDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.micheltlutz.MLSwiperCardsDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MLSwiperCardsDemo.app/MLSwiperCardsDemo";
+			};
+			name = Release;
+		};
+		D0D796A2224D0A520038F4CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2L8WPWWVB6;
+				INFOPLIST_FILE = MLSwiperCardsDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.micheltlutz.MLSwiperCardsDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MLSwiperCardsDemo;
+			};
+			name = Debug;
+		};
+		D0D796A3224D0A520038F4CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2L8WPWWVB6;
+				INFOPLIST_FILE = MLSwiperCardsDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.micheltlutz.MLSwiperCardsDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MLSwiperCardsDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0D79655224D088A0038F4CA /* Build configuration list for PBXProject "MLSwiperCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D7966D224D088A0038F4CA /* Debug */,
+				D0D7966E224D088A0038F4CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D7966F224D088A0038F4CA /* Build configuration list for PBXNativeTarget "MLSwiperCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D79670224D088A0038F4CA /* Debug */,
+				D0D79671224D088A0038F4CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D79672224D088A0038F4CA /* Build configuration list for PBXNativeTarget "MLSwiperCardsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D79673224D088A0038F4CA /* Debug */,
+				D0D79674224D088A0038F4CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D796A4224D0A520038F4CA /* Build configuration list for PBXNativeTarget "MLSwiperCardsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D7969E224D0A520038F4CA /* Debug */,
+				D0D7969F224D0A520038F4CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D796A5224D0A520038F4CA /* Build configuration list for PBXNativeTarget "MLSwiperCardsDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D796A0224D0A520038F4CA /* Debug */,
+				D0D796A1224D0A520038F4CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D796A6224D0A520038F4CA /* Build configuration list for PBXNativeTarget "MLSwiperCardsDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D796A2224D0A520038F4CA /* Debug */,
+				D0D796A3224D0A520038F4CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0D79652224D088A0038F4CA /* Project object */;
+}
