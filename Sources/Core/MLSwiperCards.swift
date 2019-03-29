@@ -19,6 +19,12 @@ public class MLSwiperCards: UIView {
         }
     }
     private var nextIndex: Int = 0
+    private var timer: Timer!
+    private var indexOfCellBeforeDragging = 0
+    private var cellSize: CGSize!
+    private var autoScroll = true
+    var delayTimer: Double = 0.5
+    var repeatTimer: Double = 5.0
 
     private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
@@ -32,6 +38,7 @@ public class MLSwiperCards: UIView {
     public init(data: [MLSwiperCardsModel], cellSize: CGSize, pageConfig: (pageIndicator: UIColor, currentPageIndicator: UIColor)?) {
         super.init(frame: .zero)
         self.data = data
+        self.cellSize = cellSize
         collection = MLSwiperCardsCollection(cellSize: cellSize)
         collection.delegate = self
         collection.dataSource = self
@@ -39,14 +46,14 @@ public class MLSwiperCards: UIView {
         frame = CGRect(x: 0, y: 0, width: cellSize.width, height: cellSize.height)
         setupViewConfiguration()
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
-                self.scrollCards()
-            }
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + delayTimer) {
+//            self.timer = Timer.scheduledTimer(withTimeInterval: self.repeatTimer, repeats: true) { _ in
+//                self.autoScrollCards()
+//            }
+//        }
     }
 
-    func scrollCards() {
+    func autoScrollCards() {
         nextIndex = pageControl.currentPage + 1
         if nextIndex >= pageControl.numberOfPages {
             nextIndex = 0
@@ -56,6 +63,32 @@ public class MLSwiperCards: UIView {
         }
         let indexPath = IndexPath(item: nextIndex, section: 0)
         self.collection.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+
+    private func calculateSectionInset() -> CGFloat {
+        let deviceIsIpad = UIDevice.current.userInterfaceIdiom == .pad
+        let deviceOrientationIsLandscape = UIDevice.current.orientation.isLandscape
+        let cellBodyViewIsExpended = deviceIsIpad || deviceOrientationIsLandscape
+        let cellBodyWidth: CGFloat = collection.layout.itemSize.width + (cellBodyViewIsExpended ? 174 : 0)
+
+        let buttonWidth: CGFloat = 50
+
+//        let inset = (collection.frame.width - cellBodyWidth + buttonWidth) / 4
+        let inset = (collection.frame.width - cellBodyWidth + buttonWidth) / CGFloat(pageControl.numberOfPages)
+        return inset
+    }
+
+    private func configureCollectionViewLayoutItemSize() {
+        let inset: CGFloat = calculateSectionInset()
+        collection.layout.itemSize = CGSize(width: collection.frame.size.width - inset * 2, height: collection.frame.size.height)
+    }
+
+    private func indexOfMajorCell() -> Int {
+        let itemWidth = collection.layout.itemSize.width
+        let proportionalOffset = collection.contentOffset.x / itemWidth
+        let index = Int(round(proportionalOffset))
+        let safeIndex = max(0, min(data.count - 1, index))
+        return safeIndex
     }
 
     required public init?(coder aDecoder: NSCoder) {
@@ -81,13 +114,50 @@ extension MLSwiperCards: UICollectionViewDataSource {
 }
 
 extension MLSwiperCards: UICollectionViewDelegateFlowLayout {
-    private func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
-                                insetForSectionAt section: Int) -> UIEdgeInsets {
-        let cellWidth: CGFloat = frame.width
-        let numberOfCells = UIScreen.main.bounds.width / cellWidth
-        let edgeInsets = (UIScreen.main.bounds.width - (numberOfCells * cellWidth)) / (numberOfCells + 1)
-        return UIEdgeInsets(top: 0, left: edgeInsets, bottom: 0, right: edgeInsets)
+
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        indexOfCellBeforeDragging = indexOfMajorCell()
     }
+
+
+
+    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if autoScroll {
+            self.timer.invalidate()
+            autoScroll = false
+        }
+        // Stop scrollView sliding:
+        targetContentOffset.pointee = scrollView.contentOffset
+
+        // calculate where scrollView should snap to:
+        let indexOfMajorCell = self.indexOfMajorCell()
+
+        // calculate conditions:
+        let swipeVelocityThreshold: CGFloat = 0.5 // after some trail and error
+        let hasEnoughVelocityToSlideToTheNextCell = indexOfCellBeforeDragging + 1 < data.count && velocity.x > swipeVelocityThreshold
+        let hasEnoughVelocityToSlideToThePreviousCell = indexOfCellBeforeDragging - 1 >= 0 && velocity.x < -swipeVelocityThreshold
+        let majorCellIsTheCellBeforeDragging = indexOfMajorCell == indexOfCellBeforeDragging
+        let didUseSwipeToSkipCell = majorCellIsTheCellBeforeDragging && (hasEnoughVelocityToSlideToTheNextCell || hasEnoughVelocityToSlideToThePreviousCell)
+
+        if didUseSwipeToSkipCell {
+
+            let snapToIndex = indexOfCellBeforeDragging + (hasEnoughVelocityToSlideToTheNextCell ? 1 : -1)
+            let toValue = collection.layout.itemSize.width * CGFloat(snapToIndex)
+
+            // Damping equal 1 => no oscillations => decay animation:
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: velocity.x, options: .allowUserInteraction, animations: {
+                scrollView.contentOffset = CGPoint(x: toValue, y: 0)
+                scrollView.layoutIfNeeded()
+            }, completion: nil)
+
+        } else {
+            // This is a much better way to scroll to a cell:
+            pageControl.currentPage = indexOfMajorCell
+            let indexPath = IndexPath(row: indexOfMajorCell, section: 0)
+            collection.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
+    }
+
 }
 
 extension MLSwiperCards: MLViewConfiguration {
@@ -96,15 +166,11 @@ extension MLSwiperCards: MLViewConfiguration {
         NSLayoutConstraint.activate([
             pageControl.centerXAnchor.constraint(equalTo: centerXAnchor),
             pageControl.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
-        ])
+            ])
     }
     
     func buildViewHierarchy() {
         addSubview(collection)
         addSubview(pageControl)
     }
-
-//    func configureViews() {
-//        backgroundColor = .red
-//    }
 }
