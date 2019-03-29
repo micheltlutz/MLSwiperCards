@@ -27,7 +27,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         cardsViewModel.loadList()
-        swiperCards = MLSwiperCards(data: cardsViewModel.list, cellSize: CGSize(width: 312, height: 152))
+        swiperCards = MLSwiperCards(data: cardsViewModel.list,
+                                    cellSize: CGSize(width: 312, height: 152),
+                                    pageConfig: nil)
         swiperCards.translatesAutoresizingMaskIntoConstraints = false
         setupView()
     }
@@ -39,7 +41,7 @@ class ViewController: UIViewController {
             swiperCards.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             swiperCards.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
             swiperCards.heightAnchor.constraint(equalToConstant: 182)
-            ])
+        ])
     }
 }
 

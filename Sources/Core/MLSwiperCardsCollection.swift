@@ -13,7 +13,7 @@ public class MLSwiperCardsCollection: UICollectionView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.itemSize = cellSize
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 32, bottom: 0, right: 32)
         layout.minimumLineSpacing = 8.0
         layout.minimumInteritemSpacing = 8.0
         super.init(frame: .zero, collectionViewLayout: layout)
