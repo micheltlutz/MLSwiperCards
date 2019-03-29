@@ -48,6 +48,8 @@
 		D03EC7E7224D54AB00ED607B /* MLSwiperCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03EC7E1224D54AB00ED607B /* MLSwiperCardCell.swift */; };
 		D03EC7E8224D556B00ED607B /* MLSwiperCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3549BB211DA389CD00C63030 /* MLSwiperCards.framework */; };
 		D03EC7E9224D556B00ED607B /* MLSwiperCards.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3549BB211DA389CD00C63030 /* MLSwiperCards.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D03EC7F1224D65C900ED607B /* MLSwiperCardsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03EC7F0224D65C900ED607B /* MLSwiperCardsCollection.swift */; };
+		D03EC7F2224D65C900ED607B /* MLSwiperCardsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03EC7F0224D65C900ED607B /* MLSwiperCardsCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +165,7 @@
 		D03EC7DF224D54AA00ED607B /* MLSwiperCardsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLSwiperCardsModel.swift; sourceTree = "<group>"; };
 		D03EC7E0224D54AB00ED607B /* MLViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLViewConfiguration.swift; sourceTree = "<group>"; };
 		D03EC7E1224D54AB00ED607B /* MLSwiperCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLSwiperCardCell.swift; sourceTree = "<group>"; };
+		D03EC7F0224D65C900ED607B /* MLSwiperCardsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSwiperCardsCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +322,7 @@
 				D03EC7E1224D54AB00ED607B /* MLSwiperCardCell.swift */,
 				D03EC7DF224D54AA00ED607B /* MLSwiperCardsModel.swift */,
 				D03EC7E0224D54AB00ED607B /* MLViewConfiguration.swift */,
+				D03EC7F0224D65C900ED607B /* MLSwiperCardsCollection.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -669,6 +673,7 @@
 			files = (
 				D03EC7E4224D54AB00ED607B /* MLViewConfiguration.swift in Sources */,
 				D03EC7E2224D54AB00ED607B /* MLSwiperCardsModel.swift in Sources */,
+				D03EC7F1224D65C900ED607B /* MLSwiperCardsCollection.swift in Sources */,
 				D03EC7E6224D54AB00ED607B /* MLSwiperCardCell.swift in Sources */,
 				D03EC7DD224D547300ED607B /* AutoLayout+Extensions.swift in Sources */,
 				359649031FB18CC000FC7ADC /* MLSwiperCards.swift in Sources */,
@@ -697,6 +702,7 @@
 			files = (
 				D03EC7E5224D54AB00ED607B /* MLViewConfiguration.swift in Sources */,
 				D03EC7E3224D54AB00ED607B /* MLSwiperCardsModel.swift in Sources */,
+				D03EC7F2224D65C900ED607B /* MLSwiperCardsCollection.swift in Sources */,
 				D03EC7E7224D54AB00ED607B /* MLSwiperCardCell.swift in Sources */,
 				D03EC7DE224D547300ED607B /* AutoLayout+Extensions.swift in Sources */,
 				359649051FB18CC000FC7ADC /* MLSwiperCards.swift in Sources */,
