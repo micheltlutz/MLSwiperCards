@@ -13,15 +13,22 @@ class CardsViewModel {
     var list: [MLSwiperCardsModel] = []
 
     func loadList() {
-        list.append(MLSwiperCardsModel(title: "Title 1", description: "Description 1"))
-        list.append(MLSwiperCardsModel(title: "Title 2", description: "Description 2"))
-        list.append(MLSwiperCardsModel(description: "Description 3"))
-        list.append(MLSwiperCardsModel(title: "Title 4", description: "Description 4"))
+        list.append(MLSwiperCardsModel(title: "Libere todas as autoavaliações",
+                                       description: "para acompanhar sua evolução, seus pontos fortes e fracos",
+                                       fontTitle: UIFont.boldSystemFont(ofSize: 15),
+                                       fontDescription: UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.light)
+            ))
+        list.append(MLSwiperCardsModel(title: "Libere todas as sessões",
+                                       description: "para melhorar seu bem-estar emocional pelo autoconhecimento",
+                                       fontTitle: UIFont.boldSystemFont(ofSize: 15),
+                                       fontDescription: UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.light)))
+        list.append(MLSwiperCardsModel(title: "Libere todas as técnicas SOS",
+                                       description: "para lidar rapidamente com situações emocionais críticas"))
+        list.append(MLSwiperCardsModel(description: "”É muito barato, pelo quanto me ajuda nas minhas emoções. É um método que funciona de verdade!”"))
     }
 }
 
 class ViewController: UIViewController {
-    
     private var swiperCards: MLSwiperCards!
     private let cardsViewModel = CardsViewModel()
     override func viewDidLoad() {

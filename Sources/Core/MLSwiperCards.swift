@@ -29,8 +29,10 @@ public class MLSwiperCards: UIView {
     private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.currentPage = 0
-        pageControl.pageIndicatorTintColor = UIColor.lightGray
-        pageControl.currentPageIndicatorTintColor = UIColor.purple
+        pageControl.pageIndicatorTintColor = UIColor(red: 148 / 255, green: 165 / 255,
+                                                     blue: 183 / 255, alpha: 1.0)
+        pageControl.currentPageIndicatorTintColor = UIColor(red: 36 / 255, green: 107 / 255,
+                                                            blue: 179 / 255, alpha: 1.0)
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
     }()
@@ -46,11 +48,11 @@ public class MLSwiperCards: UIView {
         frame = CGRect(x: 0, y: 0, width: cellSize.width, height: cellSize.height)
         setupViewConfiguration()
 
-//        DispatchQueue.main.asyncAfter(deadline: .now() + delayTimer) {
-//            self.timer = Timer.scheduledTimer(withTimeInterval: self.repeatTimer, repeats: true) { _ in
-//                self.autoScrollCards()
-//            }
-//        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + delayTimer) {
+            self.timer = Timer.scheduledTimer(withTimeInterval: self.repeatTimer, repeats: true) { _ in
+                self.autoScrollCards()
+            }
+        }
     }
 
     func autoScrollCards() {
@@ -109,8 +111,8 @@ extension MLSwiperCards: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as? MLSwiperCardCell else {
             return UICollectionViewCell()
         }
-        cell.configure(with: data[indexPath.row])
         cell.prepareForReuse()
+        cell.configure(with: data[indexPath.row])
         return cell
     }
 }
@@ -121,11 +123,9 @@ extension MLSwiperCards: UICollectionViewDelegateFlowLayout {
         indexOfCellBeforeDragging = indexOfMajorCell()
     }
 
-
-
     public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if autoScroll {
-//            self.timer.invalidate()
+            self.timer.invalidate()
             autoScroll = false
         }
         // Stop scrollView sliding:
