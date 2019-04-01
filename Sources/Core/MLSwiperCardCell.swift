@@ -9,15 +9,14 @@
 import UIKit
 
 public class MLSwiperCardCell: UICollectionViewCell {
-//    private (set) var cellIndex: Int = 0 //
     private var viewController: UIViewController!
     private let stackView: UIStackView = {
         let stackView = UIStackView(frame: .zero)
         stackView.spacing = 0
         stackView.axis = .vertical
-        stackView.alignment = .leading
-        stackView.distribution = .fill
-        stackView.layoutMargins = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        stackView.alignment = .center
+        stackView.distribution = .fillProportionally
+        stackView.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         stackView.isLayoutMarginsRelativeArrangement = true
         return stackView
     }()

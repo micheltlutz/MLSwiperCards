@@ -9,16 +9,21 @@
 import UIKit
 
 public class MLSwiperCardsCollection: UICollectionView {
-    public init(cellSize: CGSize) {
+    let layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = cellSize
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 32, bottom: 0, right: 32)
         layout.minimumLineSpacing = 8.0
         layout.minimumInteritemSpacing = 8.0
+        return layout
+    }()
+
+    public init(cellSize: CGSize) {
+        layout.itemSize = cellSize
         super.init(frame: .zero, collectionViewLayout: layout)
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .green
+        backgroundColor = .clear
         isPagingEnabled = true
         showsHorizontalScrollIndicator = false
     }
