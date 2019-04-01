@@ -75,6 +75,8 @@ public class MLSwiperCards: UIView {
 
 //        let inset = (collection.frame.width - cellBodyWidth + buttonWidth) / 4
         let inset = (collection.frame.width - cellBodyWidth + buttonWidth) / CGFloat(pageControl.numberOfPages)
+        print("inset")
+        print(inset)
         return inset
     }
 
@@ -123,7 +125,7 @@ extension MLSwiperCards: UICollectionViewDelegateFlowLayout {
 
     public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if autoScroll {
-            self.timer.invalidate()
+//            self.timer.invalidate()
             autoScroll = false
         }
         // Stop scrollView sliding:

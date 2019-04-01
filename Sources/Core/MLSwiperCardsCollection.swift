@@ -23,7 +23,7 @@ public class MLSwiperCardsCollection: UICollectionView {
         layout.itemSize = cellSize
         super.init(frame: .zero, collectionViewLayout: layout)
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .green
+        backgroundColor = .clear
         isPagingEnabled = true
         showsHorizontalScrollIndicator = false
     }
