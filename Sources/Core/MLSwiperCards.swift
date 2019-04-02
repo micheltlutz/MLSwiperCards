@@ -67,35 +67,31 @@ public class MLSwiperCards: UIView {
         self.collection.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
 
-    private func calculateSectionInset() -> CGFloat {
-        let deviceIsIpad = UIDevice.current.userInterfaceIdiom == .pad
-        let deviceOrientationIsLandscape = UIDevice.current.orientation.isLandscape
-        let cellBodyViewIsExpended = deviceIsIpad || deviceOrientationIsLandscape
-        let cellBodyWidth: CGFloat = collection.layout.itemSize.width + (cellBodyViewIsExpended ? 174 : 0)
-
-        let buttonWidth: CGFloat = 50
-
-        let inset = (collection.frame.width - cellBodyWidth + buttonWidth) / 4
-//        let inset = (collection.frame.width - cellBodyWidth + buttonWidth) / CGFloat(pageControl.numberOfPages)
-        print("inset")
-        print(inset)
-        return inset
-    }
-
-    public func configureCollectionViewLayoutItemSize() {
-        let inset: CGFloat = calculateSectionInset()
-        collection.layout.itemSize = CGSize(width: collection.frame.size.width - inset * 2, height: collection.frame.size.height)
-    }
+////    private func calculateSectionInset() -> CGFloat {
+////        let deviceIsIpad = UIDevice.current.userInterfaceIdiom == .pad
+////        let deviceOrientationIsLandscape = UIDevice.current.orientation.isLandscape
+////        let cellBodyViewIsExpended = deviceIsIpad || deviceOrientationIsLandscape
+////        let cellBodyWidth: CGFloat = collection.layout.itemSize.width + (cellBodyViewIsExpended ? 174 : 0)
+////
+////        let buttonWidth: CGFloat = 50
+////
+////        let inset = (collection.frame.width - cellBodyWidth + buttonWidth) / 4
+//////        let inset = (collection.frame.width - cellBodyWidth + buttonWidth) / CGFloat(pageControl.numberOfPages)
+////        print("inset")
+////        print(inset)
+////        return inset
+////    }
+//
+//    public func configureCollectionViewLayoutItemSize() {
+//        let inset: CGFloat = calculateSectionInset()
+//        collection.layout.itemSize = CGSize(width: collection.frame.size.width - inset * 2, height: collection.frame.size.height)
+//    }
 
     private func indexOfMajorCell() -> Int {
         let itemWidth = collection.layout.itemSize.width
-        print("itemWidth: \(itemWidth)")
         let proportionalOffset = collection.contentOffset.x / itemWidth
-        print("proportionalOffset: \(proportionalOffset)")
         let index = Int(round(proportionalOffset))
-        print("index: \(index)")
         let safeIndex = max(0, min(data.count - 1, index))
-        print("safeIndex: \(safeIndex)")
         return safeIndex
     }
 
@@ -143,8 +139,8 @@ extension MLSwiperCards: UICollectionViewDelegateFlowLayout {
                          y: -scrollView.contentInset.top)
 
         targetContentOffset.pointee = offset
+        pageControl.currentPage = Int(roundedIndex)
     }
-
 }
 
 extension MLSwiperCards: MLViewConfiguration {
