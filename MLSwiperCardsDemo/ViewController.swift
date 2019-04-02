@@ -41,6 +41,11 @@ class ViewController: UIViewController {
         setupView()
     }
 
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        swiperCards.configureCollectionViewLayoutItemSize()
+//    }
+
     private func setupView() {
         view.addSubview(swiperCards)
         NSLayoutConstraint.activate([

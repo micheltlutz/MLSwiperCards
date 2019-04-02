@@ -55,7 +55,7 @@ public class MLSwiperCards: UIView {
         }
     }
 
-    func autoScrollCards() {
+    private func autoScrollCards() {
         nextIndex = pageControl.currentPage + 1
         if nextIndex >= pageControl.numberOfPages {
             nextIndex = 0
@@ -75,23 +75,27 @@ public class MLSwiperCards: UIView {
 
         let buttonWidth: CGFloat = 50
 
-//        let inset = (collection.frame.width - cellBodyWidth + buttonWidth) / 4
-        let inset = (collection.frame.width - cellBodyWidth + buttonWidth) / CGFloat(pageControl.numberOfPages)
+        let inset = (collection.frame.width - cellBodyWidth + buttonWidth) / 4
+//        let inset = (collection.frame.width - cellBodyWidth + buttonWidth) / CGFloat(pageControl.numberOfPages)
         print("inset")
         print(inset)
         return inset
     }
 
-    private func configureCollectionViewLayoutItemSize() {
+    public func configureCollectionViewLayoutItemSize() {
         let inset: CGFloat = calculateSectionInset()
         collection.layout.itemSize = CGSize(width: collection.frame.size.width - inset * 2, height: collection.frame.size.height)
     }
 
     private func indexOfMajorCell() -> Int {
         let itemWidth = collection.layout.itemSize.width
+        print("itemWidth: \(itemWidth)")
         let proportionalOffset = collection.contentOffset.x / itemWidth
+        print("proportionalOffset: \(proportionalOffset)")
         let index = Int(round(proportionalOffset))
+        print("index: \(index)")
         let safeIndex = max(0, min(data.count - 1, index))
+        print("safeIndex: \(safeIndex)")
         return safeIndex
     }
 
@@ -128,36 +132,17 @@ extension MLSwiperCards: UICollectionViewDelegateFlowLayout {
             self.timer.invalidate()
             autoScroll = false
         }
-        // Stop scrollView sliding:
-        targetContentOffset.pointee = scrollView.contentOffset
 
-        // calculate where scrollView should snap to:
-        let indexOfMajorCell = self.indexOfMajorCell()
+        let cellWithIncludingSpacing = (collection.layout.itemSize.width + collection.layout.minimumLineSpacing)
 
-        // calculate conditions:
-        let swipeVelocityThreshold: CGFloat = 0.5 // after some trail and error
-        let hasEnoughVelocityToSlideToTheNextCell = indexOfCellBeforeDragging + 1 < data.count && velocity.x > swipeVelocityThreshold
-        let hasEnoughVelocityToSlideToThePreviousCell = indexOfCellBeforeDragging - 1 >= 0 && velocity.x < -swipeVelocityThreshold
-        let majorCellIsTheCellBeforeDragging = indexOfMajorCell == indexOfCellBeforeDragging
-        let didUseSwipeToSkipCell = majorCellIsTheCellBeforeDragging && (hasEnoughVelocityToSlideToTheNextCell || hasEnoughVelocityToSlideToThePreviousCell)
+        var offset = targetContentOffset.pointee
+        let index  = (offset.x + scrollView.contentInset.left) / cellWithIncludingSpacing
+        let roundedIndex = round(index)
 
-        if didUseSwipeToSkipCell {
+        offset = CGPoint(x: roundedIndex * cellWithIncludingSpacing - scrollView.contentInset.left,
+                         y: -scrollView.contentInset.top)
 
-            let snapToIndex = indexOfCellBeforeDragging + (hasEnoughVelocityToSlideToTheNextCell ? 1 : -1)
-            let toValue = collection.layout.itemSize.width * CGFloat(snapToIndex)
-
-            // Damping equal 1 => no oscillations => decay animation:
-            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: velocity.x, options: .allowUserInteraction, animations: {
-                scrollView.contentOffset = CGPoint(x: toValue, y: 0)
-                scrollView.layoutIfNeeded()
-            }, completion: nil)
-
-        } else {
-            // This is a much better way to scroll to a cell:
-            pageControl.currentPage = indexOfMajorCell
-            let indexPath = IndexPath(row: indexOfMajorCell, section: 0)
-            collection.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        }
+        targetContentOffset.pointee = offset
     }
 
 }
