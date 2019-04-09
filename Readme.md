@@ -19,7 +19,7 @@ A simple and elegant Swiper Cards with Swift
 
 ## Requirements
 
-- iOS 8.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+
+- iOS 10.0+
 - Xcode 10.0+
 
 ## Installation
@@ -154,7 +154,7 @@ Issues and pull requests are welcome!
 
 ## Author
 
-Michel Lutz & Marcos Lacerda [@michel_lutz](https://twitter.com/michel_lutz)
+Michel Lutz [@michel_lutz](https://twitter.com/michel_lutz)
 
 ## License
 

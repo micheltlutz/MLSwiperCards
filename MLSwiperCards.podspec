@@ -5,11 +5,9 @@ Pod::Spec.new do |s|
  s.summary = 'A simple and elegant Swiper Cards with Swift'
  s.homepage = 'http://micheltlutz.me'
  s.social_media_url = 'https://twitter.com/michel_lutz'
- s.authors = { "Michel Lutz" => "michel_lutz@icloud.com",
-               "Marcos Lacerda" => "markos.lacerda@gmail.com"
-}
+ s.authors = { "Michel Lutz" => "michel_lutz@icloud.com" }
  s.source = { :git => "https://github.com/micheltlutz/MLSwiperCards.git", :tag => "v"+s.version.to_s }
- s.platforms = { :ios => "10.0", :osx => "10.10", :tvos => "9.0", :watchos => "2.0" }
+ s.platforms = { :ios => "10.0" }
  s.requires_arc = true
 
  s.default_subspec = "Core"
